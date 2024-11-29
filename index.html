@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar com Lista</title>
+    <style>
+        /* Resetando alguns estilos padrão */
+        body, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos para a Navbar */
+        nav {
+            background-color: #333;
+        }
+
+        ul {
+            list-style-type: none;  /* Remove os pontos da lista */
+            display: flex;          /* Para deixar os itens da lista lado a lado */
+            justify-content: center; /* Alinha os itens no centro */
+            padding: 10px;
+        }
+
+        li {
+            margin: 0 15px; /* Espaço entre os itens */
+        }
+
+        a {
+            color: white;
+            text-decoration: none; /* Remove o sublinhado */
+            font-size: 18px;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        a:hover {
+            background-color: #575757; /* Efeito de hover */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
