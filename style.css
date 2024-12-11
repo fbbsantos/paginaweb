@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: blue;
+}
+
+.caixa {
+    border: 1px solid black;
+    padding: 10px;
+    margin: auto;
+    width: 300px;
+    background-color: #fff;
+    color: red2; /* Erro intencional: cor inválida */
+}
+
+.tabela {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1 solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Erro intencional: seletor incorreto */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: green; /* Erro intencional: cor sobrescrevendo a da classe */
+}
