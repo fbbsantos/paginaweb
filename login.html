@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+        .login-container label {
+            display: block;
+            margin-top: 10px;
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    
+        <input type="text" id="usuario" placeholder="Usuário">
+        <input type="password" id="senha" placeholder="Senha">
+        <button onclick="validarLogin()">Entrar</button>
+        <label id="mensagem"></label>
+    
+</div>
+
+<script>
+    function validarLogin() {
+        var usuario = document.getElementById("usuario").value;
+        var senha = document.getElementById("senha").value;
+        var mensagem = document.getElementById("mensagem");
+
+        // Limpa a mensagem anterior
+        mensagem.textContent = "";
+
+        if (usuario == "" || senha == "") {
+            mensagem.textContent = "Favor preencher login e senha";
+            return false;
+        }
+
+        // Aqui você pode colocar os valores corretos para o usuário e senha
+        var usuarioCorreto = "admin";
+        var senhaCorreta = "1234";
+
+        if (usuario === usuarioCorreto && senha === senhaCorreta) {
+            mensagem.style.color = "green";
+            mensagem.textContent = "Login realizado com sucesso!";            
+            //return true;
+        } else {
+            mensagem.style.color = "red";
+            mensagem.textContent = "Login e/ou senha incorretos";
+            //return false;
+        }
+    }
+</script>
+
+</body>
+</html>
